@@ -1,0 +1,10 @@
+{
+  "name": "opencode-cp",
+  "version": "0.1.0",
+  "description": "Comando /cp do OpenCode: copia para a área de transferência do Windows um bloco marcado da resposta.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/cp-core.test.mjs test/cp-plugin.test.mjs"
+  }
+}
