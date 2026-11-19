@@ -20,7 +20,7 @@ No OpenCode:
 | `/cp` | Copia o último bloco `prompt` da resposta mais recente que tenha um |
 | `/cp 2` | Copia o 2º bloco contando do fim (`1` é o último) |
 | `/cp all` | Copia todos os blocos `prompt` da resposta, separados por linha em branco |
-| `/cp msg` | Copia a resposta inteira, sem procurar bloco |
+| `/cp m` | Copia a resposta inteira, sem procurar bloco |
 | `/cp tag=nome` | Usa outra marca no lugar de `prompt` |
 | `/cp force` | Copia mesmo que o filtro de segredos reclame |
 

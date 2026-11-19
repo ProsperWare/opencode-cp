@@ -9,11 +9,16 @@ test("parseArgs: vazio usa o último bloco", () => {
   assert.deepEqual(parseArgs(""), { ok: true, mode: "last", n: 1, tag: "prompt", force: false });
 });
 
-test("parseArgs: número, all, msg, tag e force", () => {
+test("parseArgs: m e o apelido msg viram o mesmo modo", () => {
+  assert.equal(parseArgs("m").mode, "msg");
+  assert.equal(parseArgs("msg").mode, "msg");
+  assert.equal(parseArgs("m").ok, true);
+});
+
+test("parseArgs: número, all, m, tag e force", () => {
   assert.equal(parseArgs("2").mode, "nth");
   assert.equal(parseArgs("2").n, 2);
   assert.equal(parseArgs("all").mode, "all");
-  assert.equal(parseArgs("msg").mode, "msg");
   assert.equal(parseArgs("tag=pronuncia").tag, "pronuncia");
   assert.equal(parseArgs("force").force, true);
   assert.equal(parseArgs("2 force tag=x").n, 2);

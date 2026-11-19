@@ -60,7 +60,12 @@ test("/cp all junta os blocos da resposta", async () => {
   assert.equal(readFileSync(r.clip.out).subarray(2).toString("utf16le"), "A\n\nB");
 });
 
-test("/cp msg copia a resposta inteira", async () => {
+test("/cp m copia a resposta inteira", async () => {
+  const r = await run({ messages: [asst("texto livre")], args: "m" });
+  assert.equal(readFileSync(r.clip.out).subarray(2).toString("utf16le"), "texto livre");
+});
+
+test("/cp msg (apelido) copia a resposta inteira", async () => {
   const r = await run({ messages: [asst("texto livre")], args: "msg" });
   assert.equal(readFileSync(r.clip.out).subarray(2).toString("utf16le"), "texto livre");
 });

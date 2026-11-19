@@ -28,7 +28,8 @@ export function parseArgs(raw) {
       out.n = n;
     } else if (tok === "all") {
       out.mode = "all";
-    } else if (tok === "msg") {
+    } else if (tok === "m" || tok === "msg") {
+      // "msg" é apelido silencioso de "m" (não documentado).
       out.mode = "msg";
     } else if (tok === "force") {
       out.force = true;
